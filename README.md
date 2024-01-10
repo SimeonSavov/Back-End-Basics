@@ -3,6 +3,7 @@
 Welcome to my repository for the 'Back-End Technologies Basics' course in QA Engineering at SoftUni. Here, I will be sharing my exercises.
 
 ## Folder:
+- [DataFormats](https://github.com/SimeonSavov/Back-End-Basics/blob/main/README.md#section-1-data-formats---json-xml-and-yaml-lesson-1)
 
 ## Section 1: Data Formats - JSON, XML, and YAML (Lesson 1)
 
