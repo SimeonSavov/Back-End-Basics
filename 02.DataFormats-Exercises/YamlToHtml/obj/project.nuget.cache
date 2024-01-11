@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aqahmXNNb76wkc4vUQ7RCZ071V+G+9PWGiLrzfLMBZfquBKp06p9yS0HEiMeHk7zaImLOTW7QhGED01VXjMYXA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\simo7\\OneDrive\\Работен плот\\QA Automation- Back-End Technologies\\03.DataFormats-Exercises\\YamlToHtml\\YamlToHtml.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simo7\\.nuget\\packages\\yamldotnet\\13.7.1\\yamldotnet.13.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
