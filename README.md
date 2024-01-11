@@ -4,6 +4,7 @@ Welcome to my repository for the 'Back-End Technologies Basics' course in QA Eng
 
 ## Folder:
 - [DataFormats](https://github.com/SimeonSavov/Back-End-Basics/blob/main/README.md#section-1-data-formats---json-xml-and-yaml-lesson-1)
+- [Exercises: DataFormats](https://github.com/SimeonSavov/Back-End-Basics/blob/main/README.md#section-2-exercises-data-formats-lesson-2)
 
 ## Section 1: Data Formats - JSON, XML, and YAML (Lesson 1)
 
