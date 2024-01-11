@@ -19,3 +19,37 @@ Welcome to my repository for the 'Back-End Technologies Basics' course in QA Eng
 - Added country data in YAML format, providing information on countries, capitals, populations, and spoken languages.
 
 These exercises are part of the "Data Formats" lesson, exploring JSON, XML, and YAML in the context of Back-End Technologies Basics. The datasets serve as valuable resources for hands-on learning and practical application of data formats in backend development.
+
+## Section 2: Exercises: Data Formats (Lesson 2)
+
+### Exercise Summary:
+
+In this exercise set, we explored various data formats, including JSON, XML, and YAML. The exercises involved creating and parsing data structures in each format to reinforce understanding and practical application. Here's a brief overview:
+
+### JSON Exercise 1:
+   - Included book data in JSON format.
+   - Applied for practical exercises on nested JSON structures and data representation.
+
+### JSON Exercise 2:
+   - Added student and course data in JSON format.
+   - Utilized for exploring complex JSON structures and relationships.
+
+### YAML Exercise 3:
+   - Integrated order data in YAML format.
+   - Explored YAML data processing and understanding complex data structures.
+
+### YAML Exercise 4:
+   - Introduced reservation data in YAML format.
+   - Used for hands-on exercises focusing on YAML structures and nested data.
+
+### XML Exercise 5:
+   - Added device data in XML format.
+   - Utilized for exploring XML parsing and processing techniques.
+
+### XML Exercise 6:
+   - Integrated vehicle data in XML format.
+   - Applied for practical exercises on XML parsing and transformation.
+
+### How to Use:
+- The associated C# programs demonstrate parsing and processing of data in each format.
+- Choose the desired data format exercise by running the program and following on-screen prompts.
