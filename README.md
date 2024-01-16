@@ -54,3 +54,39 @@ In this exercise set, we explored various data formats, including JSON, XML, and
 ### How to Use:
 - The associated C# programs demonstrate parsing and processing of data in each format.
 - Choose the desired data format exercise by running the program and following on-screen prompts.
+
+## Section 3: JavaScript Basics (Lesson 3)
+
+### Overview:
+
+This section covers fundamental JavaScript concepts and practices, providing a solid foundation for beginners. The exercises focus on practical scenarios, allowing learners to apply their knowledge and enhance problem-solving skills.
+
+### Exercise 1: Simple Multiplication
+- Implemented a basic JavaScript function to multiply a given number by 2. This exercise serves as an introduction to writing simple functions.
+
+### Exercise 2: Display Information
+- Created a function to display information about a person, including their name, age, and grade. This exercise emphasizes string interpolation and formatting in JavaScript.
+
+### Exercise 3: Check for Excellence
+- Implemented a conditional function to check if a given number is excellent. This exercise introduces basic if-else statements.
+
+### Exercise 4: Convert Month Number to Name
+- Developed a function to convert a numerical month representation into its corresponding name. This exercise showcases the usage of switch statements.
+
+### Exercise 5: Arithmetic Operations
+- Introduced a function to perform various arithmetic operations based on user input. This exercise highlights the practical application of switch statements in JavaScript.
+
+### Exercise 6: Find the Largest Number
+- Implemented a function to find the largest among three numbers using Math.max. This exercise emphasizes the usage of built-in functions in JavaScript.
+
+### Exercise 7: Calculate Ticket Price
+- Created a function to calculate ticket prices based on age and type of day. This exercise demonstrates nested conditional statements.
+
+### Exercise 8: Calculate Circle Area
+- Introduced a function to calculate the area of a circle, given the radius. This exercise emphasizes handling different data types using typeof.
+
+### Exercise 9: Print Numbers
+- Implemented a loop to print numbers from 1 to 5. This exercise reinforces the fundamental concept of loops in JavaScript.
+
+### Exercise 10: Print Numbers in Reverse
+- Developed a function to print numbers in reverse order within a specified range. This exercise provides hands-on experience with loops and conditional statements.
