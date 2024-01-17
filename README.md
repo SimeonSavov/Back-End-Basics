@@ -91,3 +91,56 @@ This section covers fundamental JavaScript concepts and practices, providing a s
 
 ### Exercise 10: Print Numbers in Reverse
 - Developed a function to print numbers in reverse order within a specified range. This exercise provides hands-on experience with loops and conditional statements.
+
+## Section 4: JavaScript - Exercises (Lesson 4)
+
+### Overview:
+This section delves deeper into JavaScript, presenting a series of exercises that cover various aspects of the language. From conditional statements and loops to functions and logical operations.
+
+### Exercise 1: Age Group Classifier
+
+- Implemented a function to classify individuals into different age groups based on predefined ranges. This exercise focuses on using conditional statements effectively.
+
+### Exercise 2: Group Cost Calculator
+
+- Created a function to calculate the total cost for different groups attending events on specific days. This exercise involves nested conditionals and arithmetic operations.
+
+### Exercise 3: Leap Year Checker
+
+- Developed a function to determine if a given year is a leap year. This exercise reinforces logical operators and conditional statements.
+
+### Exercise 4: Number Range Sum
+
+- Implemented a function to calculate the sum of numbers within a specified range. This exercise emphasizes loop structures and basic arithmetic operations.
+
+### Exercise 5: Multiplication Table Generator
+
+- Developed a function to generate and display the multiplication table for a given number. This exercise reinforces the use of loops for repetitive tasks.
+
+### Exercise 6: Digit Sum Calculator
+
+- Implemented a function to calculate the sum of digits in a given number. This exercise introduces while loops and basic arithmetic operations.
+
+### Exercise 7: Character Concatenation
+
+- Created a function to concatenate three characters and display the resulting string. This exercise emphasizes string manipulation in JavaScript.
+
+### Exercise 8: Reverse Characters
+
+- Implemented a function to reverse the order of three characters. This exercise provides practice with string manipulation and array operations.
+
+### Exercise 9: Fruit Purchase Calculator
+
+- Developed a function to calculate the total cost of purchasing a specified amount of fruit. This exercise involves basic arithmetic operations and string formatting.
+
+### Exercise 10: Identical Digits Checker
+
+- Implemented a function to check if all digits in a given number are identical. This exercise involves using loops and conditional statements for digit comparison.
+
+### Exercise 11: Speed Limit Checker
+
+- Created a function to check if a vehicle is within the speed limit based on the speed zone. This exercise demonstrates the use of if-else statements and logical operators.
+
+### Exercise 12: Culinary Operations Simulator
+
+- Implemented a function simulating a series of cooking operations on a numerical input. This exercise emphasizes function composition and conditional logic in a culinary context.
