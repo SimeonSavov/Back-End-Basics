@@ -145,3 +145,61 @@ This section delves deeper into JavaScript, presenting a series of exercises tha
 ### Exercise 12: Culinary Operations Simulator
 
 - Implemented a function simulating a series of cooking operations on a numerical input. This exercise emphasizes function composition and conditional logic in a culinary context.
+
+## Section 5: JavaScript Fundamentals (Lesson 5)
+
+### Overview:
+
+This section focuses on fundamental JavaScript concepts, covering exercises that explore arrays, loops, conditionals, and basic data manipulation.
+
+### Exercise 1: Array Element Sum
+
+-   Developed a function to calculate the sum of the first and last elements of an array. This exercise introduces basic array manipulation in JavaScript.
+
+### Exercise 2: Array Reversal
+
+-   Implemented a function to reverse the order of elements in an array. This exercise reinforces array manipulation skills, particularly using loops.
+
+### Exercise 3: Even and Odd Sum
+
+-   Created a function to calculate the difference between the sums of even and odd numbers in an array. This exercise involves loop iteration and conditional statements.
+
+### Exercise 4: Substring Extractor
+
+-   Developed a function to extract a substring from a given text based on a specified start index and count. This exercise reinforces string manipulation in JavaScript.
+
+### Exercise 5: Word Censorship
+
+-   Implemented a function to censor a banned word in a text by replacing it with asterisks. This exercise introduces string replacement and loop-based string manipulation.
+
+### Exercise 6: Word Counter
+
+-   Created a function to count the occurrences of a specific word in a text. This exercise involves splitting a text into words and counting using loops.
+
+### Exercise 7: Grade Classifier
+
+-   Implemented a function to classify grades into different categories. This exercise introduces conditional statements based on grade ranges.
+
+### Exercise 8: Power Calculator
+
+-   Developed a function to calculate the power of a number. This exercise emphasizes using the `Math.pow` function for mathematical operations.
+
+### Exercise 9: String Repeater
+
+-   Implemented a function to repeat a given string a specified number of times. This exercise involves loop iteration for string concatenation.
+
+### Exercise 10: Product Price Calculator
+
+-   Created a function to calculate the total price of a product based on its type and quantity. This exercise involves switch statements for product-specific pricing.
+
+### Exercise 11: Person Object Creator
+
+-   Developed a function to create a person object with specified attributes. This exercise introduces object creation and initialization.
+
+### Exercise 12: Object Property Printer
+
+-   Implemented a function to print the properties of an object. This exercise reinforces object iteration and property access.
+
+### Exercise 13: Unique Names and Phone Numbers
+
+-   Developed a function to extract and print unique names and phone numbers from an array of strings. This exercise emphasizes object creation and string manipulation.
