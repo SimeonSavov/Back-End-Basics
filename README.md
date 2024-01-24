@@ -8,6 +8,7 @@ Welcome to my repository for the 'Back-End Technologies Basics' course in QA Eng
 - [JavaScript-Basics](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-3-javascript-basics-lesson-3)
 - [Exericses: JavaScript-Basics](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-4-javascript---exercises-lesson-4)
 - [JavaScript-Fundamentals](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-5-javascript-fundamentals-lesson-5)
+- [Exercises: JavaScript-Fundamentals](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-6-javascript-fundamentals-exercises-lesson-6)
 
 ## Section 1: Data Formats - JSON, XML, and YAML (Lesson 1)
 
