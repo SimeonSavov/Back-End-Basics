@@ -204,3 +204,77 @@ This section focuses on fundamental JavaScript concepts, covering exercises that
 ### Exercise 13: Unique Names and Phone Numbers
 
 -   Developed a function to extract and print unique names and phone numbers from an array of strings. This exercise emphasizes object creation and string manipulation.
+
+## Section 6: JavaScript Fundamentals Exercises (Lesson 6)
+
+### Overview:
+
+This section delves deeper into JavaScript fundamentals, covering exercises that explore array manipulation, string operations, and object handling. The exercises provide hands-on experience in practical scenarios, reinforcing core concepts.
+
+### Exercise 1: Array Rotation
+
+-   Developed a function to rotate the elements of an array a specified number of times. This exercise focuses on array manipulation and rotation.
+
+### Exercise 2: Array Stepper
+
+-   Implemented a function to select elements from an array with a specified step. This exercise reinforces array manipulation skills, particularly using loops.
+
+### Exercise 3: Alphabetical Order
+
+-   Created a function to sort an array of strings alphabetically. This exercise involves the use of the `sort` method and string comparison.
+
+### Exercise 4: Min-Max Array
+
+-   Developed a function to rearrange an array, placing the smallest and largest elements alternatively. This exercise reinforces array sorting and manipulation.
+
+### Exercise 5: Word Replacement
+
+-   Implemented a function to replace specific words in a text with corresponding words from another list. This exercise introduces string replacement and array manipulation.
+
+### Exercise 6: Word Finder
+
+-   Created a function to check if a specific word exists in a given text. This exercise involves string manipulation and conditional statements.
+
+### Exercise 7: Smallest Number
+
+-   Implemented a function to find the smallest number among three given numbers. This exercise emphasizes the use of conditional statements and mathematical operations.
+
+### Exercise 8: Arithmetic Operations
+
+-   Developed a function to perform arithmetic operations based on user input. This exercise highlights practical applications of switch statements in JavaScript.
+
+### Exercise 9: String Repeater
+
+-   Implemented a function to repeat a given string a specified number of times. This exercise involves loop iteration for string concatenation.
+
+### Exercise 10: Password Validator
+
+-   Developed a function to validate a password based on specified criteria. This exercise introduces regular expressions and error handling.
+
+### Exercise 11: Employee Data Processor
+
+-   Implemented a function to process an array of employee names, generating additional data. This exercise emphasizes object creation and array iteration.
+
+### Exercise 12: Geographical Data Formatter
+
+-   Developed a function to format geographical data into objects with specific attributes. This exercise reinforces object creation and property initialization.
+
+### Exercise 13: Stock Inventory Manager
+
+-   Created a function to manage stock levels based on current and ordered stock data. This exercise involves object manipulation and iteration.
+
+### Exercise 14: Movie Database Manager
+
+-   Implemented a function to manage a movie database, processing commands to add details to movies. This exercise showcases object manipulation and filtering.
+
+### Exercise 15: RPG Heroes Data Processor
+
+-   Developed a function to process RPG heroes' data, sorting and displaying relevant information. This exercise emphasizes object creation, sorting, and output formatting.
+
+### Exercise 16: Odd Word Occurrence Finder
+
+-   Implemented a function to find and return words with odd occurrences in a given text. This exercise involves string manipulation, word counting, and object handling.
+
+### Exercise 17: Parking Lot Manager
+
+-   Developed a function to manage a parking lot, processing data for incoming and outgoing cars. This exercise demonstrates the use of a Set for efficient data management and sorting.
