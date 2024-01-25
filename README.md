@@ -279,3 +279,29 @@ This section delves deeper into JavaScript fundamentals, covering exercises that
 ### Exercise 17: Parking Lot Manager
 
 -   Developed a function to manage a parking lot, processing data for incoming and outgoing cars. This exercise demonstrates the use of a Set for efficient data management and sorting.
+
+## Section 7: Unit Testing with JavaScript (Lesson 7)
+
+### Overview:
+
+This section focuses on the fundamentals of unit testing in JavaScript. It covers exercises that involve writing unit tests for various functions to ensure their correctness and reliability.
+
+### Exercise 1: Sum Function
+
+-   Implemented a `sum` function that calculates the sum of an array of numbers.
+-   Created unit tests using Chai and Mocha to validate the function's behavior with different input scenarios.
+
+### Exercise 2: Symmetry Checker
+
+-   Developed an `isSymmetric` function to check if an array is symmetric.
+-   Created unit tests to verify the function's correctness with symmetric and non-symmetric arrays, as well as edge cases.
+
+### Exercise 3: RGB to Hex Color Converter
+
+-   Implemented an `rgbToHexColor` function to convert RGB values to hexadecimal color codes.
+-   Created comprehensive unit tests to cover various scenarios, including invalid input values and correct conversions.
+
+### Exercise 4: Calculator Factory
+
+-   Implemented a `createCalculator` function that returns a calculator object with add, subtract, and get methods.
+-   Developed unit tests to ensure the calculator behaves correctly with various sequences of addition and subtraction operations.
