@@ -10,6 +10,7 @@ Welcome to my repository for the 'Back-End Technologies Basics' course in QA Eng
 - [JavaScript-Fundamentals](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-5-javascript-fundamentals-lesson-5)
 - [Exercises: JavaScript-Fundamentals](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-6-javascript-fundamentals-exercises-lesson-6)
 - [UnitTesting with JavaScript](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-7-unit-testing-with-javascript-lesson-7)
+- [Exercises: UnitTesting with JavaScript](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-8-unit-testing-with-javascript---exercises-lesson-8)
 
 ## Section 1: Data Formats - JSON, XML, and YAML (Lesson 1)
 
@@ -306,3 +307,27 @@ This section focuses on the fundamentals of unit testing in JavaScript. It cover
 
 -   Implemented a `createCalculator` function that returns a calculator object with add, subtract, and get methods.
 -   Developed unit tests to ensure the calculator behaves correctly with various sequences of addition and subtraction operations.
+
+## Section 8: Unit Testing with JavaScript - Exercises (Lesson 8)
+
+### Overview:
+
+This section focuses on unit testing principles in JavaScript, emphasizing the importance of testing functions for correctness and reliability. The exercises cover writing unit tests for different functions to ensure their robustness.
+
+### Exercise 1: Odd or Even Checker
+
+- Implemented an isOddOrEven function to determine whether the length of a given string is odd or even. Created unit tests using Chai and Mocha to validate the function's behavior with various input types, including non-strings and empty strings.
+
+### Exercise 2: Character Lookup
+
+- Developed a lookupChar function to retrieve a character at a specified index from a given string. Designed unit tests to ensure the function handles different scenarios, such as invalid input types, incorrect indices, and correct character retrieval.
+
+### Exercise 3: Math Enforcer
+
+- Created a mathEnforcer object with methods for adding five, subtracting ten, and calculating the sum of two numbers. Implemented thorough unit tests to validate the object's behavior with different input types, including strings and various numeric values.
+
+### Exercise 4: Array Analyzer
+
+- Implemented an analyzeArray function to calculate the minimum, maximum, and length of a numeric array. Crafted unit tests to ensure the function handles arrays with different elements, empty arrays, and arrays with identical elements correctly.
+
+**Note:** Each exercise includes comprehensive unit tests using Chai and Mocha to cover a wide range of scenarios, ensuring the reliability and correctness of the implemented functions.
