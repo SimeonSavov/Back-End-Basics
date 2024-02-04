@@ -339,7 +339,7 @@ This section focuses on unit testing principles in JavaScript, emphasizing the i
 
 This section provided a comprehensive overview of databases, focusing on SQL Server Management Studio (SSMS) for SQL databases and MongoDB for NoSQL databases. Participants gained hands-on experience in executing SQL queries, covering essential CRUD operations (Create, Read, Update, Delete). Additionally, practical exercises involved working with MongoDB, including the insertion of JSON files and performing operations using MongoDB Compass. This laid the foundation for understanding fundamental database concepts and operations in both SQL and NoSQL environments.
 
-## Section 10: Integration Testing (Lesson 10)**
+## Section 10: Integration Testing (Lesson 10)
 
 ### Overview:
 
