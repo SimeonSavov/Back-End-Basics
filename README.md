@@ -331,3 +331,9 @@ This section focuses on unit testing principles in JavaScript, emphasizing the i
 - Implemented an analyzeArray function to calculate the minimum, maximum, and length of a numeric array. Crafted unit tests to ensure the function handles arrays with different elements, empty arrays, and arrays with identical elements correctly.
 
 **Note:** Each exercise includes comprehensive unit tests using Chai and Mocha to cover a wide range of scenarios, ensuring the reliability and correctness of the implemented functions.
+
+## Section 9: Databases - SQL and NoSQL (Lesson 9)
+
+### Overview:
+
+This section provided a comprehensive overview of databases, focusing on SQL Server Management Studio (SSMS) for SQL databases and MongoDB for NoSQL databases. Participants gained hands-on experience in executing SQL queries, covering essential CRUD operations (Create, Read, Update, Delete). Additionally, practical exercises involved working with MongoDB, including the insertion of JSON files and performing operations using MongoDB Compass. This laid the foundation for understanding fundamental database concepts and operations in both SQL and NoSQL environments.
