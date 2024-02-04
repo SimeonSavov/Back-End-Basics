@@ -11,6 +11,7 @@ Welcome to my repository for the 'Back-End Technologies Basics' course in QA Eng
 - [Exercises: JavaScript-Fundamentals](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-6-javascript-fundamentals-exercises-lesson-6)
 - [UnitTesting with JavaScript](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-7-unit-testing-with-javascript-lesson-7)
 - [Exercises: UnitTesting with JavaScript](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-8-unit-testing-with-javascript---exercises-lesson-8)
+- [Databases SQL and NoSQL](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-9-databases---sql-and-nosql-lesson-9)
 
 ## Section 1: Data Formats - JSON, XML, and YAML (Lesson 1)
 
