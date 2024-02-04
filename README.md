@@ -338,3 +338,51 @@ This section focuses on unit testing principles in JavaScript, emphasizing the i
 ### Overview:
 
 This section provided a comprehensive overview of databases, focusing on SQL Server Management Studio (SSMS) for SQL databases and MongoDB for NoSQL databases. Participants gained hands-on experience in executing SQL queries, covering essential CRUD operations (Create, Read, Update, Delete). Additionally, practical exercises involved working with MongoDB, including the insertion of JSON files and performing operations using MongoDB Compass. This laid the foundation for understanding fundamental database concepts and operations in both SQL and NoSQL environments.
+
+## Section 10: Integration Testing (Lesson 10)**
+
+### Overview:
+
+This section delves into integration testing for the TownsApplication project, focusing on validating the functionality of the TownController class. Integration tests have been created to ensure the correctness and reliability of key operations such as adding, updating, deleting towns, handling invalid input, preventing duplicates, and listing all towns.
+
+**Project Structure:**
+
+-   **Main File (Program.cs):**
+    
+    -   Implements the console-based Town Management System.
+    -   Utilizes the TownController for town-related operations.
+-   **DbContext (TownDbContext.cs):**
+    
+    -   Defines the TownDbContext class, responsible for interacting with the in-memory database.
+-   **Model (Town.cs):**
+    
+    -   Represents the Town entity with properties like Id, Name, and Population.
+-   **Controller (TownController.cs):**
+    
+    -   Manages town-related operations, including adding, updating, deleting, listing, and resetting the database.
+    -   Implements validation for town names and populations.
+
+**Integration Tests (TownControllerIntegrationTests.cs):**
+
+-   **AddTown_ValidInput_ShouldAddTown:**
+    
+    -   Tests the successful addition of a town with valid inputs.
+-   **AddTown_InvalidName_ShouldThrowArgumentException:**
+    
+    -   Ensures that AddTown throws an ArgumentException for invalid town names.
+-   **AddTown_InvalidPopulation_ShouldThrowArgumentException:**
+    
+    -   Validates that AddTown handles invalid population values and throws the expected exception.
+-   **AddTown_DuplicateTownName_DoesNotAddDuplicateTown:**
+    
+    -   Verifies that AddTown does not add a duplicate town with the same name.
+-   **UpdateTown_ShouldUpdatePopulation:**
+    
+    -   Checks if the UpdateTown method correctly updates the population of a town.
+-   **DeleteTown_ShouldDeleteTown:**
+    
+    -   Tests the deletion of a town and ensures it is removed from the database.
+-   **ListTowns_ShouldReturnTowns:**
+    
+    -   Validates that the ListTowns method correctly returns a list of all towns in the database.
+ 
