@@ -387,3 +387,28 @@ This section delves into integration testing for the TownsApplication project, f
     
     -   Validates that the ListTowns method correctly returns a list of all towns in the database.
  
+## Section 11: Integration Testing - Exercises - Part1 (Lesson 11)
+
+This section covers exercises related to integration testing in the context of the LibroConsoleAPI project. Integration tests are crucial for verifying the interactions between various components of the application and ensuring that they work together as expected.
+
+### Content:
+
+1.  **Integration Test Files:**
+    
+    -   `AddBookMethodTests.cs`: Contains tests for adding books to the database, covering scenarios with valid and invalid input data.
+    -   `DeleteBookMethodTests.cs`: Focuses on testing the deletion of books from the database, including cases with valid and invalid ISBNs.
+    -   `GetAllBooksMethodTests.cs`: Tests the retrieval of all books from the database, handling scenarios where books exist and where none are found.
+    -   `GetSpecificAsyncMethodTests.cs`: Covers tests for retrieving a specific book from the database based on its ISBN, handling cases with valid and invalid ISBNs.
+    -   `SearchByTitleMethodTests.cs`: Tests the functionality of searching for books by their titles, considering scenarios with valid and invalid title fragments.
+    -   `UpdateBookMethodTests.cs`: Validates the functionality of updating book details in the database, including cases with valid and invalid input data.
+2.  **Purpose:**
+    
+    -   Validate the behavior of the `BookManager` class and its interaction with the database.
+    -   Ensure that CRUD (Create, Read, Update, Delete) operations on books function correctly.
+    -   Cover edge cases and handle invalid inputs to maintain the integrity and reliability of the application.
+3.  **Technologies Used:**
+    
+    -   C#
+    -   xUnit testing framework
+    -   nUnit testing framework
+    -   Entity Framework Core for database operations
