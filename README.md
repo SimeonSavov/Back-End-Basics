@@ -413,3 +413,27 @@ This section covers exercises related to integration testing in the context of t
     -   xUnit testing framework
     -   nUnit testing framework
     -   Entity Framework Core for database operations
+
+## Section 12: Integration Testing - Exercises - Part 2 (Lesson 12)
+
+In this section, we continued our exploration of integration testing by delving deeper into testing the integration between various components of our application. We focused on testing the interactions between different layers, such as controllers, services, repositories, and the database.
+
+### Contents:
+
+1.  **XUnit Integration Tests**:
+    
+    -   Implemented integration tests using XUnit framework.
+    -   Covered CRUD operations for managing movies in the library.
+    -   Ensured proper handling of valid and invalid movie data.
+    -   Verified functionality for adding, deleting, updating, and retrieving movies.
+    -   Utilized XUnit's Fact and Theory attributes for different test scenarios.
+    -   Checked for expected exceptions and handled edge cases appropriately.
+2.  **NUnit Integration Tests**:
+    
+    -   Developed integration tests using NUnit framework.
+    -   Covered similar functionalities as XUnit tests, focusing on CRUD operations for managing movies.
+    -   Ensured proper handling of valid and invalid movie data.
+    -   Verified functionality for adding, deleting, updating, and retrieving movies.
+    -   Utilized NUnit's SetUp, TearDown, and OneTimeSetUp, OneTimeTearDown attributes for test setup and teardown operations.
+
+These exercises provided hands-on experience in thoroughly testing the integration between various components of our application, ensuring robustness and reliability.
