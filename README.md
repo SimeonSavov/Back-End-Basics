@@ -14,6 +14,7 @@ Welcome to my repository for the 'Back-End Technologies Basics' course in QA Eng
 - [Databases SQL and NoSQL](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-9-databases---sql-and-nosql-lesson-9)
 - [IntegrationTesting-Lab](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-10-integration-testing-lesson-10)
 - [IntegrationTesting-Exercises-Part1](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-11-integration-testing---exercises---part1-lesson-11)
+- [IntegrationTesting-Exercises-Part2](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-12-integration-testing---exercises---part-2-lesson-12)
 
 ## Section 1: Data Formats - JSON, XML, and YAML (Lesson 1)
 
