@@ -1,0 +1,12 @@
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\bin\Debug\net6.0\ItemManagementLib.deps.json
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\bin\Debug\net6.0\ItemManagementLib.dll
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\bin\Debug\net6.0\ItemManagementLib.pdb
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\obj\Debug\net6.0\ItemManagementLib.csproj.AssemblyReference.cache
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\obj\Debug\net6.0\ItemManagementLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\obj\Debug\net6.0\ItemManagementLib.AssemblyInfoInputs.cache
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\obj\Debug\net6.0\ItemManagementLib.AssemblyInfo.cs
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\obj\Debug\net6.0\ItemManagementLib.csproj.CoreCompileInputs.cache
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\obj\Debug\net6.0\ItemManagementLib.dll
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\obj\Debug\net6.0\refint\ItemManagementLib.dll
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\obj\Debug\net6.0\ItemManagementLib.pdb
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\14.Unit-Testing-with-Mocking\ItemManagement\ItemManagementLib\obj\Debug\net6.0\ref\ItemManagementLib.dll
