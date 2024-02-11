@@ -438,3 +438,30 @@ In this section, we continued our exploration of integration testing by delving 
     -   Utilized NUnit's SetUp, TearDown, and OneTimeSetUp, OneTimeTearDown attributes for test setup and teardown operations.
 
 These exercises provided hands-on experience in thoroughly testing the integration between various components of our application, ensuring robustness and reliability.
+
+## Section 13: Unit Testing with Mocking (Lesson 13)
+
+In Section 13, "Unit Testing with Mocking," you'll delve into the essential practice of unit testing with mocking techniques. Unit testing is a crucial aspect of software development, enabling you to validate individual units of code in isolation to ensure they function as expected. Mocking, on the other hand, allows you to simulate dependencies of the unit under test, providing controlled environments for testing without reliance on external resources.
+
+### Exercise Summaries:
+
+1.  **Exercise 1: Greeting Provider Unit Testing**
+    
+    -   **Objective:** The objective of this exercise is to test the `GetGreeting` method of the `GreetingProvider` class, which returns a greeting message based on the current time of day.
+    -   **Techniques Learned:**
+        -   Mocking the `ITimeProvider` interface using Moq to simulate different time scenarios.
+        -   Writing unit tests to verify the behavior of the `GetGreeting` method under various time conditions.
+    -   **Key Concepts Covered:**
+        -   Using setup methods in Moq to define the behavior of mock objects.
+        -   Employing assertions to verify the correctness of method outputs.
+        -   Testing edge cases and boundary conditions to ensure comprehensive coverage.
+2.  **Exercise 2: ItemRepository Unit Testing**
+    
+    -   **Objective:** This exercise focuses on testing the methods of the `ItemService` class, which interacts with an `ItemRepository` to perform CRUD operations on items.
+    -   **Techniques Learned:**
+        -   Mocking the `IItemRepository` interface to isolate the `ItemService` from the actual database.
+        -   Writing unit tests to cover different scenarios such as adding, updating, deleting items, and validating input.
+    -   **Key Concepts Covered:**
+        -   Using Moq to mock repository interactions and simulate database behavior.
+        -   Testing exception handling and error conditions.
+        -   Validating input parameters and ensuring method correctness under various conditions.
