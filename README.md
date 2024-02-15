@@ -16,6 +16,7 @@ Welcome to my repository for the 'Back-End Technologies Basics' course in QA Eng
 - [IntegrationTesting-Exercises-Part1](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-11-integration-testing---exercises---part1-lesson-11)
 - [IntegrationTesting-Exercises-Part2](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-12-integration-testing---exercises---part-2-lesson-12)
 - [UnitTesting-with-Mocking](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-13-unit-testing-with-mocking-lesson-13)
+- [RESTful-API-Testing-Execises](https://github.com/SimeonSavov/Back-End-Basics?tab=readme-ov-file#section-14-restful-api-testing---exercises-lesson-14)
 
 ## Section 1: Data Formats - JSON, XML, and YAML (Lesson 1)
 
