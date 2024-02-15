@@ -466,3 +466,24 @@ In Section 13, "Unit Testing with Mocking," you'll delve into the essential prac
         -   Using Moq to mock repository interactions and simulate database behavior.
         -   Testing exception handling and error conditions.
         -   Validating input parameters and ensuring method correctness under various conditions.
+
+## Section 14: RESTful API Testing - Exercises (Lesson 14)
+
+In Section 14, "RESTful API Testing," we focus on ensuring the reliability and functionality of our RESTful API endpoints. Through comprehensive testing strategies, we validate the behavior of our API methods, covering scenarios such as adding, retrieving, updating, and deleting resources.
+
+### Key Topics Covered:
+
+-   Writing integration tests for API endpoints using NUnit.
+-   Mimicking database behavior with an in-memory database for controlled testing environments.
+-   Applying the Arrange-Act-Assert pattern to structure test cases effectively.
+-   Testing various scenarios, including successful operations, error handling, and edge cases.
+-   Verifying the correctness of API responses and ensuring proper data manipulation.
+
+### Exercises Included:
+
+1.  **EventService Integration Testing:** Integration tests are created to validate the functionality of the `EventService` class, covering methods for managing events in our application. These tests ensure that events can be added, retrieved, updated, and deleted correctly, while also checking for error handling and edge cases.
+    
+2.  **Comprehensive Test Suite:** A comprehensive suite of tests is developed to assess different aspects of the API, including adding events, retrieving event details, joining and leaving events, updating events, and checking user participation. These tests help maintain the reliability and stability of the API functionality across various scenarios.
+    
+
+By mastering RESTful API testing techniques, we ensure that our API endpoints perform as expected, providing a robust foundation for our application's backend functionality.
