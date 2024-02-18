@@ -488,3 +488,23 @@ In Section 14, "RESTful API Testing," we focus on ensuring the reliability and f
     
 
 By mastering RESTful API testing techniques, we ensure that our API endpoints perform as expected, providing a robust foundation for our application's backend functionality.
+
+## Section 15: Code Coverage in JS and C# (Lesson 15)
+
+In **Lesson 15**, we explored the concept of code coverage and its importance in ensuring the reliability and effectiveness of our codebase. We delved into techniques for measuring code coverage in both JavaScript (JS) and C# environments, leveraging tools such as NYC for JS and built-in features for C#.
+
+### Key Concepts Covered:
+
+-   **Code Coverage Fundamentals:** Understanding what code coverage is and why it's crucial for assessing the quality of our code.
+-   **JS Code Coverage with NYC:** Exploring how to measure code coverage in JavaScript using the NYC (istanbul) tool, analyzing our test suite's effectiveness in covering our codebase.
+-   **C# Code Coverage:** Implementing code coverage analysis in C# projects, utilizing built-in features and tools to ensure comprehensive testing coverage.
+
+### Highlights:
+
+-   **JavaScript Coverage:** We learned how to integrate NYC into our JavaScript projects, gaining insights into the percentage of code covered by our tests and identifying areas for improvement.
+-   **C# Coverage:** Exploring code coverage within C# projects, we enhanced our testing suite to achieve higher coverage percentages, improving the overall reliability and robustness of our applications.
+
+
+### Why Code Coverage Matters:
+
+Code coverage serves as a critical metric in software development, indicating the proportion of our codebase that is exercised by tests. By striving for high code coverage percentages, we can increase confidence in our code's correctness, identify potential bugs early in the development cycle, and facilitate more effective maintenance and refactoring efforts.
