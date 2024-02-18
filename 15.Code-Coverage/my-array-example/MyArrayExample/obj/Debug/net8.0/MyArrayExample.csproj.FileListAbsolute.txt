@@ -1,0 +1,14 @@
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\obj\Debug\net8.0\MyArrayExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\obj\Debug\net8.0\MyArrayExample.AssemblyInfoInputs.cache
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\obj\Debug\net8.0\MyArrayExample.AssemblyInfo.cs
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\obj\Debug\net8.0\MyArrayExample.csproj.CoreCompileInputs.cache
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\bin\Debug\net8.0\MyArrayExample.exe
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\bin\Debug\net8.0\MyArrayExample.deps.json
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\bin\Debug\net8.0\MyArrayExample.runtimeconfig.json
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\bin\Debug\net8.0\MyArrayExample.dll
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\bin\Debug\net8.0\MyArrayExample.pdb
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\obj\Debug\net8.0\MyArrayExample.dll
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\obj\Debug\net8.0\refint\MyArrayExample.dll
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\obj\Debug\net8.0\MyArrayExample.pdb
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\obj\Debug\net8.0\MyArrayExample.genruntimeconfig.cache
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\17.CodeCoverage-Lab\MyArrayExample\MyArrayExample\obj\Debug\net8.0\ref\MyArrayExample.dll
