@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Qrr0yftgxPo0aM9FfOVsMd2a/ARbUiVZ3SVmEdzbLJ8eKB85WkO4iLe2Q7bRliN52UfrZcyi3SxT86v0jRI7Fw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\simo7\\OneDrive\\Работен плот\\QA Automation- Back-End Technologies\\18.Mutation-Testing-Lab\\StrykerDemo\\ArrayTools\\ArrayTools.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simo7\\.nuget\\packages\\fluentassertions\\6.12.0\\fluentassertions.6.12.0.nupkg.sha512",
+    "C:\\Users\\simo7\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\simo7\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

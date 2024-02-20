@@ -1,0 +1,12 @@
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\bin\Debug\net6.0\ArrayTools.deps.json
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\obj\Debug\net6.0\ArrayTools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\obj\Debug\net6.0\ArrayTools.AssemblyInfoInputs.cache
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\obj\Debug\net6.0\ArrayTools.AssemblyInfo.cs
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\bin\Debug\net6.0\ArrayTools.dll
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\bin\Debug\net6.0\ArrayTools.pdb
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\obj\Debug\net6.0\ArrayTools.csproj.AssemblyReference.cache
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\obj\Debug\net6.0\ArrayTools.csproj.CoreCompileInputs.cache
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\obj\Debug\net6.0\ArrayTools.dll
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\obj\Debug\net6.0\refint\ArrayTools.dll
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\obj\Debug\net6.0\ArrayTools.pdb
+C:\Users\simo7\OneDrive\Работен плот\QA Automation- Back-End Technologies\18.Mutation-Testing-Lab\StrykerDemo\ArrayTools\obj\Debug\net6.0\ref\ArrayTools.dll
