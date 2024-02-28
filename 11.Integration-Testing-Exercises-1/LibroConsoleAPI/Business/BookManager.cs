@@ -1,7 +1,6 @@
 ﻿using LibroConsoleAPI.Business.Contracts;
 using LibroConsoleAPI.Data.Models;
 using LibroConsoleAPI.DataAccess.Contracts;
-using LibroConsoleAPI.Repositories;
 using System.ComponentModel.DataAnnotations;
 
 namespace LibroConsoleAPI.Business
@@ -112,6 +111,4 @@ namespace LibroConsoleAPI.Business
             return true;
         }
     }
-
-
 }

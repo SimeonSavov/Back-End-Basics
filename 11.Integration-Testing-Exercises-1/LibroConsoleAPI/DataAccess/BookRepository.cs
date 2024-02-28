@@ -1,5 +1,4 @@
-﻿using LibroConsoleAPI.Business;
-using LibroConsoleAPI.Data.Models;
+﻿using LibroConsoleAPI.Data.Models;
 using LibroConsoleAPI.DataAccess;
 using LibroConsoleAPI.DataAccess.Contracts;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +8,6 @@ namespace LibroConsoleAPI.Repositories
     public class BookRepository : IBookRepository
     {
         private readonly LibroDbContext _context;
-        private TestLibroDbContext dbContext;
 
         public BookRepository(LibroDbContext context)
         {

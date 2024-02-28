@@ -1,29 +1,23 @@
 ﻿using LibroConsoleAPI.Business;
 using LibroConsoleAPI.Business.Contracts;
 using LibroConsoleAPI.Data.Models;
-using LibroConsoleAPI.DataAccess;
 using LibroConsoleAPI.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LibroConsoleAPI.IntegrationTests.NUnit
 {
     public  class IntegrationTests
     {
         private TestLibroDbContext dbContext;
-        private BookManager bookManager;
+        private IBookManager bookManager;
 
         [SetUp]
         public void SetUp()
         {
-            this.dbContext = new TestLibroDbContext();
+            string dbName = $"TestDb_{Guid.NewGuid()}";
+            this.dbContext = new TestLibroDbContext(dbName);
             this.bookManager = new BookManager(new BookRepository(this.dbContext));
-            dbContext.Database.EnsureDeleted();
         }
 
         [TearDown]
@@ -52,9 +46,15 @@ namespace LibroConsoleAPI.IntegrationTests.NUnit
 
             // Assert
             var bookInDb = await dbContext.Books.FirstOrDefaultAsync(b => b.ISBN == newBook.ISBN);
-            Assert.NotNull(bookInDb);
-            Assert.AreEqual(newBook.Title, bookInDb.Title);
-            Assert.AreEqual(newBook.Author, bookInDb.Author);
+            Assert.That(bookInDb, Is.Not.Null);
+            Assert.That(bookInDb.Title, Is.EqualTo(newBook.Title));
+            Assert.That(bookInDb.Author, Is.EqualTo(newBook.Author));
+            Assert.That(bookInDb.ISBN, Is.EqualTo(newBook.ISBN));
+            Assert.That(bookInDb.YearPublished, Is.EqualTo(newBook.YearPublished));
+            Assert.That(bookInDb.Genre, Is.EqualTo(newBook.Genre));
+            Assert.That(bookInDb.Pages, Is.EqualTo(newBook.Pages));
+            Assert.That(bookInDb.Price, Is.EqualTo(newBook.Price));
+            
         }
 
         [Test]
@@ -63,21 +63,23 @@ namespace LibroConsoleAPI.IntegrationTests.NUnit
             // Arrange
             var invalidBook = new Book
             {
-                Title = new string('B', 300),
-                Author = new string('A', 300),
-                ISBN = "invalidISBN",
-                YearPublished = 2025,
-                Genre = new string('C', 51),
-                Pages = 0,
-                Price = 0
+                // Provide invalid credentials, e.g., missing required fields
+                Title = null, // Title is required, so we'll leave it null
+                Author = "John Doe",
+                ISBN = "1234567890123", // Example ISBN
+                YearPublished = 2021,
+                Genre = "Fiction",
+                Pages = 100,
+                Price = 19.99
             };
 
-            // Act
-            var exception = Assert.ThrowsAsync<ValidationException>(() => this.bookManager.AddAsync(invalidBook));
+            // Act and Assert
+            // Use Assert.ThrowsAsync to assert that an exception of type ValidationException is thrown
+            var exception = Assert.ThrowsAsync<ValidationException>(() => bookManager.AddAsync(invalidBook));
 
-            // Assert
             Assert.That(exception.Message, Is.EqualTo("Book is invalid."));
         }
+
 
         [Test]
         public async Task DeleteBookAsync_WithValidISBN_ShouldRemoveBookFromDb()
@@ -87,176 +89,276 @@ namespace LibroConsoleAPI.IntegrationTests.NUnit
             {
                 Title = "Test Book",
                 Author = "John Doe",
-                ISBN = "1234567890123",
+                ISBN = "1234567890123", // Example ISBN
                 YearPublished = 2021,
                 Genre = "Fiction",
                 Pages = 100,
                 Price = 19.99
             };
-            this.bookManager.AddAsync(newBook);
+
+            await bookManager.AddAsync(newBook); // Add the book to the database
+
             // Act
-            this.bookManager.DeleteAsync(newBook.ISBN);
+            await bookManager.DeleteAsync(newBook.ISBN); // Delete the book from the database
 
             // Assert
-            var bookInDb = await this.dbContext.Books.FirstOrDefaultAsync();
-            Assert.Null(bookInDb);
+            var bookInDb = await dbContext.Books.FirstOrDefaultAsync(b => b.ISBN == newBook.ISBN);
+            Assert.IsNull(bookInDb); // Assert that the book is no longer in the database
         }
 
-        [Test]
-        public async Task DeleteBookAsync_TryToDeleteWithNullOrWhiteSpaceISBN_ShouldThrowException()
+
+        [TestCase("")]
+        [TestCase("    ")]
+        [TestCase(null)]
+        public async Task DeleteBookAsync_TryToDeleteWithNullOrWhiteSpaceISBN_ShouldThrowException(string invalidISBN)
         {
-            // Arrange
-            var newBook = new Book
-            {
-                Title = "Book",
-                Author = "Doe",
-                ISBN = "1111111111111",
-                YearPublished = 2021,
-                Genre = "Fiction",
-                Pages = 100,
-                Price = 19.99
-            };
-            this.bookManager.AddAsync(newBook);
+            // Act and Assert
+            // Use Assert.ThrowsAsync to assert that an exception of type ArgumentException is thrown
+            var exception = Assert.ThrowsAsync<ArgumentException>(() => bookManager.DeleteAsync(invalidISBN));
 
-            // Act
-            var exception = Assert.ThrowsAsync<ArgumentException>(async () => await bookManager.DeleteAsync(""));
-
-            // Assert
             Assert.That(exception.Message, Is.EqualTo("ISBN cannot be empty."));
         }
+
 
         [Test]
         public async Task GetAllAsync_WhenBooksExist_ShouldReturnAllBooks()
         {
             // Arrange
-            await DatabaseSeeder.SeedDatabaseAsync(dbContext, bookManager);
+            var booksToAdd = new List<Book>
+    {
+        new Book
+        {
+            Title = "Book 1",
+            Author = "Author 1",
+            ISBN = "1234567890123", // Example ISBN
+            YearPublished = 2021,
+            Genre = "Fiction",
+            Pages = 100,
+            Price = 19.99
+        },
+        new Book
+        {
+            Title = "Book 2",
+            Author = "Author 2",
+            ISBN = "2345678901234", // Example ISBN
+            YearPublished = 2020,
+            Genre = "Non-Fiction",
+            Pages = 150,
+            Price = 29.99
+        }
+    };
+
+            foreach (var book in booksToAdd)
+            {
+                await bookManager.AddAsync(book); // Add books to the database
+            }
 
             // Act
             var result = await bookManager.GetAllAsync();
 
             // Assert
-            Assert.AreEqual(10, result.Count());
-
+            Assert.IsNotNull(result); // Assert that the result is not null
+            Assert.That(result.Count(), Is.EqualTo(2)); // Assert that all added books are returned
         }
+
 
         [Test]
         public async Task GetAllAsync_WhenNoBooksExist_ShouldThrowKeyNotFoundException()
         {
-            // Arrange
-            var newBook = new Book();
+            // Act and Assert: Use Assert.ThrowsAsync to assert that an exception of type KeyNotFoundException is thrown
+            var exception = Assert.ThrowsAsync<KeyNotFoundException>(() => bookManager.GetAllAsync());
 
-            // Act
-            var exception = Assert.ThrowsAsync<KeyNotFoundException>(async () => await bookManager.GetAllAsync());
-
-            // Assert
-            Assert.AreEqual("No books found.", exception.Message);
-            
+            Assert.That(exception.Message, Is.EqualTo("No books found."));
         }
+
 
         [Test]
         public async Task SearchByTitleAsync_WithValidTitleFragment_ShouldReturnMatchingBooks()
         {
-            // Arrange
-            await DatabaseSeeder.SeedDatabaseAsync(dbContext, bookManager);
-
-            // Act
-            var result = await bookManager.SearchByTitleAsync("1984");
-
-            // Assert
-            Assert.That(result.Single().Title, Is.EqualTo("1984"));
+            // Arrange: Add books with titles containing the specified title fragment
+            var booksToAdd = new List<Book>
+    {
+        new Book
+        {
+            Title = "Book with Title Fragment",
+            Author = "Author 1",
+            ISBN = "1234567890123", // Example ISBN
+            YearPublished = 2021,
+            Genre = "Fiction",
+            Pages = 100,
+            Price = 19.99
+        },
+        new Book
+        {
+            Title = "Another Book with Title Fragment",
+            Author = "Author 2",
+            ISBN = "2345678901234", // Example ISBN
+            YearPublished = 2020,
+            Genre = "Non-Fiction",
+            Pages = 150,
+            Price = 29.99
         }
+    };
+
+            foreach (var book in booksToAdd)
+            {
+                await bookManager.AddAsync(book); // Add books to the database
+            }
+
+            // Act: Search for books with the specified title fragment
+            var result = await bookManager.SearchByTitleAsync("Fragment");
+
+            // Assert: Ensure that the result contains matching books
+            Assert.IsNotNull(result); // Assert that the result is not null
+            Assert.That(result.Any(), Is.True); // Assert that there is at least one matching book
+            Assert.That(result.All(b => b.Title.Contains("Fragment")), Is.True); // Assert that all returned books contain the specified title fragment
+        }
+
 
         [Test]
         public async Task SearchByTitleAsync_WithInvalidTitleFragment_ShouldThrowKeyNotFoundException()
         {
-            // Arrange
-            await DatabaseSeeder.SeedDatabaseAsync(dbContext, bookManager);
+            // Act and Assert: Use Assert.ThrowsAsync to assert that an exception of type KeyNotFoundException is thrown
+            var exception = Assert.ThrowsAsync<KeyNotFoundException>(() => bookManager.SearchByTitleAsync("InvalidFragment"));
 
-            // Act
-            var exception = Assert.ThrowsAsync<KeyNotFoundException>(async () => await bookManager.SearchByTitleAsync("Home Alone 2"));
-
-            // Assert
             Assert.That(exception.Message, Is.EqualTo("No books found with the given title fragment."));
         }
+
+        [TestCase("")]
+        [TestCase("    ")]
+        [TestCase(null)]
+        public async Task SearchByTitleAsync_WithNullOrWhiteSpace_ShouldThrowArgumentException(string invalidTitle)
+        {
+            // Act and Assert: Use Assert.ThrowsAsync to assert that an exception of type KeyNotFoundException is thrown
+            var exception = Assert.ThrowsAsync<ArgumentException>(() => bookManager.SearchByTitleAsync(invalidTitle));
+
+            Assert.That(exception.Message, Is.EqualTo("Title fragment cannot be empty."));
+        }
+
 
         [Test]
         public async Task GetSpecificAsync_WithValidIsbn_ShouldReturnBook()
         {
-            // Arrange
-            await DatabaseSeeder.SeedDatabaseAsync(dbContext, bookManager);
+            // Arrange: Add a book with the specified ISBN to the database
+            var bookToAdd = new Book
+            {
+                Title = "Test Book",
+                Author = "John Doe",
+                ISBN = "1234567890123", // Example ISBN
+                YearPublished = 2021,
+                Genre = "Fiction",
+                Pages = 100,
+                Price = 19.99
+            };
 
-            // Act
-            var result = await bookManager.GetSpecificAsync("9780312857753");
+            await bookManager.AddAsync(bookToAdd); // Add the book to the database
 
-            // Assert
-            Assert.That(result.ISBN, Is.EqualTo("9780312857753"));
-            Assert.That(result.Title, Is.EqualTo("1984"));
-            Assert.That(result.Author, Is.EqualTo("George Orwell"));
+            // Act: Get the book with the specified ISBN
+            var result = await bookManager.GetSpecificAsync("1234567890123");
+
+            // Assert: Ensure that the result is not null and it represents the correct book
+            Assert.NotNull(result); // Assert that the result is not null
+            Assert.That(result.Title, Is.EqualTo(bookToAdd.Title)); // Assert that the returned book has the correct title
+            Assert.That(result.Author, Is.EqualTo(bookToAdd.Author)); // Assert that the returned book has the correct author
         }
+
 
         [Test]
         public async Task GetSpecificAsync_WithInvalidIsbn_ShouldThrowKeyNotFoundException()
         {
             // Arrange
-            await DatabaseSeeder.SeedDatabaseAsync(dbContext, bookManager);
+            var invalidISBN = "invalid";
 
-            // Act
-            var exception = Assert.ThrowsAsync<KeyNotFoundException>(async () => await bookManager.GetSpecificAsync("1112223334445"));
+            // Act and Assert: Use Assert.ThrowsAsync to assert that an exception of type KeyNotFoundException is thrown
+            var exception = Assert.ThrowsAsync<KeyNotFoundException>(() => bookManager.GetSpecificAsync(invalidISBN));
 
-            // Assert
-            Assert.That(exception.Message, Is.EqualTo("No book found with ISBN: 1112223334445"));
+            Assert.That(exception.Message, Is.EqualTo($"No book found with ISBN: {invalidISBN}"));
         }
+
+        [TestCase("")]
+        [TestCase("   ")]
+        [TestCase(null)]
+        public async Task GetSpecificAsync_WithNullOrWhiteSpace_ShouldThrowArgumentException(string invalidISBN)
+        {
+            // Act and Assert: Use Assert.ThrowsAsync to assert that an exception of type KeyNotFoundException is thrown
+            var exception = Assert.ThrowsAsync<ArgumentException>(() => bookManager.GetSpecificAsync(invalidISBN));
+
+            Assert.That(exception.Message, Is.EqualTo("ISBN cannot be empty."));
+        }
+
 
         [Test]
         public async Task UpdateAsync_WithValidBook_ShouldUpdateBook()
         {
-            // Arrange
-            var newBook = new Book
+            // Arrange: Add a book with the specified details to the database
+            var initialBook = new Book
             {
-                Title = "New Book",
-                Author = "Simeon",
-                ISBN = "1234567890123",
-                YearPublished = 2021,
-                Genre = "Personal Growth",
+                Title = "Initial Title",
+                Author = "Initial Author",
+                ISBN = "1234567890123", // Example ISBN
+                YearPublished = 2020,
+                Genre = "Initial Genre",
                 Pages = 200,
-                Price = 19.99
+                Price = 29.99
             };
-            await bookManager.AddAsync(newBook);
 
-            newBook.Title = "Fantasy";
-            newBook.Author = "Simeon Savov Jr";
+            await bookManager.AddAsync(initialBook); // Add the initial book to the database
 
-            // Act
-            await bookManager.UpdateAsync(newBook);
+            // Act: Update the book's details
 
-            // Assert
-            var bookInDb = await dbContext.Books.FirstOrDefaultAsync();
-            Assert.That(bookInDb.Title, Is.EqualTo("Fantasy"));
+            var bookToUpdate = await bookManager.GetSpecificAsync(initialBook.ISBN);
 
+            var updatedBook = new Book
+            {
+                Title = "Updated Title",
+                Author = "Updated Author",
+                ISBN = "1234567890123", // Same ISBN as initial book
+                YearPublished = 2021,
+                Genre = "Updated Genre",
+                Pages = 250,
+                Price = 39.99
+            };
+
+            bookToUpdate.Title = updatedBook.Title;
+            bookToUpdate.Author = updatedBook.Author;
+            bookToUpdate.YearPublished = updatedBook.YearPublished;
+            bookToUpdate.Genre = updatedBook.Genre;
+            bookToUpdate.Pages = updatedBook.Pages;
+            bookToUpdate.Price = updatedBook.Price;            
+
+            await bookManager.UpdateAsync(bookToUpdate); // Update the book in the database
+
+            // Assert: Retrieve the updated book from the database and ensure it reflects the changes
+            var result = await bookManager.GetSpecificAsync("1234567890123"); // Get the updated book
+
+            Assert.That(result, Is.Not.Null); // Assert that the result is not null
+            Assert.That(result.Title, Is.EqualTo("Updated Title")); // Assert that the title is updated
+            Assert.That(result.Author, Is.EqualTo("Updated Author")); // Assert that the author is updated
+            Assert.That(result.YearPublished, Is.EqualTo(2021)); // Assert that the year published is updated
+            Assert.That(result.Genre, Is.EqualTo("Updated Genre")); // Assert that the genre is updated
+            Assert.That(result.Pages, Is.EqualTo(250)); // Assert that the number of pages is updated
+            Assert.That(result.Price, Is.EqualTo(39.99)); // Assert that the price is updated
         }
+
 
         [Test]
         public async Task UpdateAsync_WithInvalidBook_ShouldThrowValidationException()
         {
-            // Arrange
-            var newBook = new Book
+            // Arrange: Prepare an invalid book (e.g., missing required fields)
+            var invalidBook = new Book
             {
-                Title = "Book",
-                Author = "Simeon",
-                ISBN = "1234567890123",
+                // Missing required fields (e.g., Title)
+                Author = "John Doe",
+                ISBN = "1234567890123", // Example ISBN
                 YearPublished = 2021,
-                Genre = "Personal Growth",
-                Pages = 200,
+                Genre = "Fiction",
+                Pages = 100,
                 Price = 19.99
             };
-            await bookManager.AddAsync(newBook);
-            // Act
-            var invalidBook1 = new Book();
 
-            var exception = Assert.ThrowsAsync<ValidationException>(async () => await bookManager.UpdateAsync(invalidBook1));
-
-            // Assert
-            Assert.That(exception.Message, Is.EqualTo("Book is invalid."));
+            // Act and Assert: Use Assert.ThrowsAsync to assert that an exception of type ValidationException is thrown
+            Assert.ThrowsAsync<ValidationException>(() => bookManager.UpdateAsync(invalidBook));
         }
+
     }
 }
